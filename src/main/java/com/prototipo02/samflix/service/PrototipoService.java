@@ -35,8 +35,8 @@ public class PrototipoService implements PrototipoRepository {
         return prototipo;
     }
 
-    public Prototipo teste(Prototipo testes) {
-        testes.setId();
+    public void delete(long id) {
+        prototipos.remove(findById(id));
     }
 }
 

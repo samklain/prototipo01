@@ -38,4 +38,10 @@ public class PrototipoController {
         prototipoService.save(prototipo);
         return new ResponseEntity<>(prototipoService.save(prototipo), HttpStatus.CREATED);
     }
+
+    @DeleteMapping(path = "/{id}")
+    public ResponseEntity<Void> delete(@PathVariable long id){
+        prototipoService.delete(id);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+    }
 }
